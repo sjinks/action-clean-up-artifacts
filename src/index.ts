@@ -17,7 +17,7 @@ async function getArtifactList(
     // eslint-disable-next-line sonarjs/prefer-while
     for (;;) {
         // eslint-disable-next-line no-await-in-loop
-        const response = await octokit.actions.listWorkflowRunArtifacts({
+        const response = await octokit.rest.actions.listWorkflowRunArtifacts({
             owner,
             repo,
             run_id,
@@ -70,7 +70,7 @@ async function run(): Promise<void> {
         startGroup('Deleting artifacts');
         for (const [artifact_id, name] of artifacts) {
             // eslint-disable-next-line no-await-in-loop
-            await octokit.actions.deleteArtifact({
+            await octokit.rest.actions.deleteArtifact({
                 owner,
                 repo,
                 artifact_id,
