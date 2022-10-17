@@ -39,7 +39,7 @@ jobs:
       github.event_name == 'push' && !contains(github.event.head_commit.message, '[ci skip]')
     steps:
       - name: Checkout the source
-        uses: actions/checkout@v2
+        uses: actions/checkout@e2f20e631ae6d7dd3b768f56a5d2af784dd54791 # tag=v2
 
       - name: Run smoke test
         uses: ./
