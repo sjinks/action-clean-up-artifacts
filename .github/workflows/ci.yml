@@ -7,6 +7,9 @@ on:
     branches:
       - master
 
+permissions:
+  contents: read
+
 jobs:
   build:
     name: Build
@@ -19,10 +22,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@8c91899e586c5b171469028077307d293428b516 # tag=v3.5.1
         with:
-          node-version: '12'
-
-      - name: Update npm to the latest version
-        run: npm i -g npm
+          node-version: '16'
 
       - name: Install dependencies
         run: npm ci
