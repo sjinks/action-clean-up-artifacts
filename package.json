@@ -22,7 +22,7 @@
   "devDependencies": {
     "@myrotvorets/eslint-config-myrotvorets-ts": "^2.5.4",
     "@types/node": "^20.0.0",
-    "@vercel/ncc": "^0.36.0",
+    "@vercel/ncc": "^0.38.0",
     "prettier": "^3.0.0",
     "typescript": "^5.0.0"
   }
