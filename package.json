@@ -17,7 +17,7 @@
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.10.0",
-    "@actions/github": "^5.0.0"
+    "@actions/github": "^6.0.0"
   },
   "devDependencies": {
     "@myrotvorets/eslint-config-myrotvorets-ts": "^2.5.4",
