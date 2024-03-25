@@ -85,4 +85,4 @@ async function run(): Promise<void> {
     }
 }
 
-run().catch((error) => setFailed((error as Error).message));
+run().catch((error: unknown) => setFailed((error as Error).message));
