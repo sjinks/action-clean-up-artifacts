@@ -14,7 +14,6 @@ async function getArtifactList(
 
     const result: Artifact[] = [];
 
-    // eslint-disable-next-line sonarjs/prefer-while
     for (;;) {
         // eslint-disable-next-line no-await-in-loop
         const response = await octokit.rest.actions.listWorkflowRunArtifacts({
