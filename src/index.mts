@@ -84,4 +84,9 @@ async function run(): Promise<void> {
     }
 }
 
-run().catch((error: unknown) => setFailed((error as Error).message));
+try {
+    await run();
+} catch (error: unknown) {
+    const err = error instanceof Error ? error : new Error(String(error));
+    setFailed(err.message);
+}

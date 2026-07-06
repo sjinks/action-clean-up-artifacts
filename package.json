@@ -3,12 +3,13 @@
   "private": true,
   "version": "2.0.0",
   "description": "Cleans up artifacts for the specified workflow run",
-  "main": "lib/index.js",
+  "exports": "./lib/index.mjs",
+  "type": "module",
   "scripts": {
     "build": "tsc",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "package": "ncc build --minify",
+    "package": "ncc build lib/index.mjs --minify --target es2024",
     "test": "exit 0",
     "all": "npm run build && npm run lint:fix && npm run package && npm test"
   },
@@ -17,12 +18,12 @@
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^3.0.0",
-    "@actions/github": "^6.0.0"
+    "@actions/github": "^9.1.1"
   },
   "devDependencies": {
     "@myrotvorets/eslint-config-myrotvorets-ts": "^3.0.0",
     "@types/node": "^26.0.0",
-    "@vercel/ncc": "^0.44.0",
+    "@vercel/ncc": "^0.44.1",
     "prettier": "^3.0.0",
     "typescript": "^5.0.0"
   },
